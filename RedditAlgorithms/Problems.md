@@ -1,8 +1,10 @@
-General
+From: https://www.reddit.com/r/cscareerquestions/comments/20ahfq/heres_a_pretty_big_list_of_programming_interview/
 
-Find the most frequent integer in an array
+## General
 
-Find pairs in an integer array whose sum is equal to 10 (bonus: do it in linear time)
+*Find the most frequent integer in an array
+
+*Find pairs in an integer array whose sum is equal to 10 (bonus: do it in linear time)
 
 Given 2 integer arrays, determine of the 2nd array is a rotated version of the 1st array. Ex. Original Array A={1,2,3,5,6,7,8} Rotated Array B={5,6,7,8,1,2,3}
 
@@ -32,7 +34,7 @@ HARD: Given a function rand5() that returns a random int between 0 and 5, implem
 
 HARD: Given a 2D array of 1s and 0s, count the number of "islands of 1s" (e.g. groups of connecting 1s)
 
-Strings
+## Strings
 
 Find the first non-repeated character in a String
 

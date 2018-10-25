@@ -29,6 +29,3 @@ const pairsSummingTen = (arr) => {
   }
   return pairs
 }
-
-
-pairsSummingTen([1,2,5,5,5,9])
