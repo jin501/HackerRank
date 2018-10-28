@@ -1,5 +1,6 @@
 // Find the only element in an array that only occurs once.
 
+// time - O(2n), space - O(nm)
 const onlyElOccursOnce = (arr) => {
   let occur = {}, result;
   for(let i=0, l = arr.length; i < l; i++){
