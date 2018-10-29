@@ -2,7 +2,7 @@
 
 // time - O(2n), space - O(nm)
 const onlyElOccursOnce = (arr) => {
-  let occur = {}, result;
+  let occur = {};
   for(let i=0, l = arr.length; i < l; i++){
     if(occur[arr[i]]){
       occur[arr[i]]++
