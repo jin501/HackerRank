@@ -2,24 +2,50 @@
 
 const binarySearch = (array, int) => {
   let left = 0, right = array.length-1
-  let mid = Math.floor(array.length / 2)
-  console.log(left, right, mid)
+  let mid = left + Math.floor((right - left) / 2)
 
   while(left <= right){
     if(int === array[mid]){
       return mid
     }
+
     if(int > array[mid]){
       left = mid + 1
-      mid = left + Math.floor((right - left) / 2)
-      console.log("left", left, right,  mid)
     }else{
       right = mid - 1
-      mid = Math.floor((right+left)/2)
-      console.log("right", left, right,  mid)
     }
+    mid = left + Math.floor((right - left) / 2)
   }
   return "not found"
 }
 
-binarySearch([0,1,2,3,4,5,6,7,8], 12)
+// Recursion
+const binarySearch = (arr, int, left=0, right=(arr.length-1)) => {
+  let mid = Math.floor(((right - left) / 2) + left)
+  if(int > arr[arr.length-1]){
+    return "not found"
+  }
+  if(arr[mid] === int){
+    return mid
+  }
+  if(int > arr[mid]){
+    return binarySearch(arr,int,mid+1,right)
+  }else{
+    return binarySearch(arr,int,left,right-1)
+  }
+}
+
+// Recursion, switch
+const binarySearch = (arr, int, left=0, right=(arr.length-1)) => {
+  let mid = Math.floor(((right - left) / 2) + left)
+  switch (true) {
+    case int > arr[arr.length-1]:
+      return "not found"
+    case arr[mid] === int:
+      return mid
+    case int > arr[mid]:
+      return binarySearch(arr,int,mid+1,right)
+    case int < arr[mid]:
+      return binarySearch(arr,int,left,right-1)
+  }
+}
